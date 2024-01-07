@@ -132,7 +132,7 @@ spec:
       enableServiceLinks: false
       containers:
         - name: controller
-          image: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_controller@sha256:e004174a896811aec46520b1f2857f1973762389426bb0e0fc5d2332d5e36c7a
+          image: gcr.m.daocloud.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_controller@sha256:e004174a896811aec46520b1f2857f1973762389426bb0e0fc5d2332d5e36c7a
           env:
             - name: WEBHOOK_NAME
               value: inmemorychannel-webhook
@@ -149,7 +149,7 @@ spec:
                 fieldRef:
                   fieldPath: metadata.namespace
             - name: DISPATCHER_IMAGE
-              value: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:521234b4cff9d3cd32f8264cd7c830caa06f9982637b4866e983591fa1abc418
+              value: gcr.m.daocloud.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:521234b4cff9d3cd32f8264cd7c830caa06f9982637b4866e983591fa1abc418
             - name: POD_NAME
               valueFrom:
                 fieldRef:
@@ -275,7 +275,7 @@ spec:
       enableServiceLinks: false
       containers:
         - name: dispatcher
-          image: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:521234b4cff9d3cd32f8264cd7c830caa06f9982637b4866e983591fa1abc418
+          image: gcr.m.daocloud.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:521234b4cff9d3cd32f8264cd7c830caa06f9982637b4866e983591fa1abc418
           readinessProbe:
             failureThreshold: 3
             httpGet:

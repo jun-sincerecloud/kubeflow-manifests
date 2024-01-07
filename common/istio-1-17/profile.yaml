@@ -16,7 +16,7 @@ spec:
       enabled: false
     pilot:
       enabled: true
-  hub: docker.io/istio
+  hub: docker.m.daocloud.io/istio
   meshConfig:
     defaultConfig:
       proxyMetadata: {}

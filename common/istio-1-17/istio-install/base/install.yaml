@@ -1568,7 +1568,7 @@ data:
         },
         "enabled": true,
         "externalIstiod": false,
-        "hub": "docker.io/istio",
+        "hub": "docker.m.daocloud.io/istio",
         "imagePullPolicy": "",
         "imagePullSecrets": [],
         "istioNamespace": "istio-system",
@@ -3011,7 +3011,7 @@ spec:
       serviceAccountName: istio-ingressgateway-service-account
       containers:
       - name: istio-proxy
-        image: docker.io/istio/proxyv2:1.17.5
+        image: docker.m.daocloud.io/istio/proxyv2:1.17.5
         ports:
         - containerPort: 15021
           protocol: TCP
@@ -3219,7 +3219,7 @@ spec:
         fsGroup: 1337
       containers:
       - name: discovery
-        image: docker.io/istio/pilot:1.17.5
+        image: docker.m.daocloud.io/istio/pilot:1.17.5
         args:
         - discovery
         - --monitoringAddr=:15014

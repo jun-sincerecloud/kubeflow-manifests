@@ -31,7 +31,7 @@ spec:
             value: ""
           - name: EXECUTIONTYPE
             value: Workflow
-        image: gcr.io/ml-pipeline/persistenceagent:dummy
+        image: gcr.m.daocloud.io/ml-pipeline/persistenceagent:dummy
         imagePullPolicy: IfNotPresent
         name: ml-pipeline-persistenceagent
         resources:

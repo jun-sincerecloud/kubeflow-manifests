@@ -4,6 +4,6 @@ resources:
 - ../default
 
 images:
-- name: docker.io/kubeflownotebookswg/pvcviewer-controller
-  newName: docker.io/kubeflownotebookswg/pvcviewer-controller
+- name: docker.m.daocloud.io/kubeflownotebookswg/pvcviewer-controller
+  newName: docker.m.daocloud.io/kubeflownotebookswg/pvcviewer-controller
   newTag: v1.8.0

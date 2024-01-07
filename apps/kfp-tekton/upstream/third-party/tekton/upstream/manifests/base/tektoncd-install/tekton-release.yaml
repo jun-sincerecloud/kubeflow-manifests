@@ -1827,18 +1827,18 @@ spec:
       serviceAccountName: tekton-pipelines-controller
       containers:
         - name: tekton-pipelines-controller
-          image: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller:v0.47.5@sha256:19c58e33dcc6729749cb6f3d31421702f0adadeaa36fb9de010b907c00faf003
+          image: gcr.m.daocloud.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller:v0.47.5@sha256:19c58e33dcc6729749cb6f3d31421702f0adadeaa36fb9de010b907c00faf003
           args: [
             # These images are built on-demand by `ko resolve` and are replaced
             # by image references by digest.
-            "-entrypoint-image", "gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.47.5@sha256:436c52e15153168af571ad9aa9c37ea2c664547d9bd83fe050394d6ef70467f1", "-nop-image", "gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.47.5@sha256:8f030b7c05425bebe21b85ac314880073d1d518d47e367d9da03e04470ab7da5", "-sidecarlogresults-image", "gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/sidecarlogresults:v0.47.5@sha256:ced09b6450a6e31daae98a647ccba668587a5e4ca9f47865fcfacaef2fc22e43", "-workingdirinit-image", "gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.47.5@sha256:3a0514058af55aa2122750b590348b37306b72f147e9cc881c632d9d78297f63",
+            "-entrypoint-image", "gcr.m.daocloud.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.47.5@sha256:436c52e15153168af571ad9aa9c37ea2c664547d9bd83fe050394d6ef70467f1", "-nop-image", "gcr.m.daocloud.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.47.5@sha256:8f030b7c05425bebe21b85ac314880073d1d518d47e367d9da03e04470ab7da5", "-sidecarlogresults-image", "gcr.m.daocloud.io/tekton-releases/github.com/tektoncd/pipeline/cmd/sidecarlogresults:v0.47.5@sha256:ced09b6450a6e31daae98a647ccba668587a5e4ca9f47865fcfacaef2fc22e43", "-workingdirinit-image", "gcr.m.daocloud.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.47.5@sha256:3a0514058af55aa2122750b590348b37306b72f147e9cc881c632d9d78297f63",
             # The shell image must allow root in order to create directories and copy files to PVCs.
             # cgr.dev/chainguard/busybox as of April 14 2022
             # image shall not contains tag, so it will be supported on a runtime like cri-o
             "-shell-image", "cgr.dev/chainguard/busybox@sha256:19f02276bf8dbdd62f069b922f10c65262cc34b710eea26ff928129a736be791",
             # for script mode to work with windows we need a powershell image
             # pinning to nanoserver tag as of July 15 2021
-            "-shell-image-win", "mcr.microsoft.com/powershell:nanoserver@sha256:b6d5ff841b78bdf2dfed7550000fd4f3437385b8fa686ec0f010be24777654d6"]
+            "-shell-image-win", "mcr.m.daocloud.io/powershell:nanoserver@sha256:b6d5ff841b78bdf2dfed7550000fd4f3437385b8fa686ec0f010be24777654d6"]
           volumeMounts:
             - name: config-logging
               mountPath: /etc/config-logging
@@ -2558,7 +2558,7 @@ spec:
       serviceAccountName: tekton-pipelines-resolvers
       containers:
         - name: controller
-          image: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers:v0.47.5@sha256:1aabcadc11da3563556369228f2b842a4ead5ef73561718055b83ca12d056f4f
+          image: gcr.m.daocloud.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers:v0.47.5@sha256:1aabcadc11da3563556369228f2b842a4ead5ef73561718055b83ca12d056f4f
           resources:
             requests:
               cpu: 100m
@@ -2724,7 +2724,7 @@ spec:
         - name: webhook
           # This is the Go import path for the binary that is containerized
           # and substituted here.
-          image: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.47.5@sha256:5816aba3b53ad4a12b943b68046892b64a7d6d704cdb19385b7495796decef94
+          image: gcr.m.daocloud.io/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.47.5@sha256:5816aba3b53ad4a12b943b68046892b64a7d6d704cdb19385b7495796decef94
           # Resource request required for autoscaler to take any action for a metric
           resources:
             requests:

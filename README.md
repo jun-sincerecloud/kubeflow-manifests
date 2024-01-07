@@ -1,4 +1,10 @@
 # Kubeflow Manifests
+已替换为国内镜像,请先添加加速器到 /etc/docker/daemon.json
+```bash
+  "registry-mirrors": [
+    "https://docker.m.daocloud.io"
+  ]
+```
 
 ## Table of Contents
 

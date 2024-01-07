@@ -4,7 +4,7 @@ metadata:
   name: fraud-detection
   namespace: kubeflow
 spec:
-  image: docker.io/bentoml/fraud_detection:o5smnagbncigycvj
+  image: docker.m.daocloud.io/bentoml/fraud_detection:o5smnagbncigycvj
   runners:
   - name: ieee-fraud-detection-0
     runnableType: XGBoost

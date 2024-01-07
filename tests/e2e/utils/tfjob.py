@@ -54,7 +54,7 @@ def create_tfjob_task(tfjob_name, tfjob_namespace, training_steps, katib_op,
                 "containers": [
                     {
                         "name": "tensorflow",
-                        "image": "docker.io/liuhougangxa/tf-estimator-mnist",
+                        "image": "docker.m.daocloud.io/liuhougangxa/tf-estimator-mnist",
                         "command": [
                             "sh",
                             "-c",
@@ -98,7 +98,7 @@ def create_tfjob_task(tfjob_name, tfjob_namespace, training_steps, katib_op,
                 "containers": [
                     {
                         "name": "tensorflow",
-                        "image": "docker.io/liuhougangxa/tf-estimator-mnist",
+                        "image": "docker.m.daocloud.io/liuhougangxa/tf-estimator-mnist",
                         "command": [
                             "sh",
                             "-c",

@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
 - ../default
 images:
-- name: docker.io/kubeflownotebookswg/notebook-controller
-  newName: docker.io/kubeflownotebookswg/notebook-controller
+- name: docker.m.daocloud.io/kubeflownotebookswg/notebook-controller
+  newName: docker.m.daocloud.io/kubeflownotebookswg/notebook-controller
   newTag: v1.8.0

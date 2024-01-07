@@ -10021,8 +10021,8 @@ stringData:
   YATAI_SYSTEM_NAMESPACE: kubeflow
   YATAI_API_TOKEN: "yrfiGXV1dw0X99eR"
 
-  INTERNAL_IMAGES_METRICS_TRANSFORMER: "quay.io/bentoml/yatai-bento-metrics-transformer:0.0.3"
-  INTERNAL_IMAGES_DEBUGGER: "quay.io/bentoml/bento-debugger:0.0.5"
+  INTERNAL_IMAGES_METRICS_TRANSFORMER: "quay.m.daocloud.io/bentoml/yatai-bento-metrics-transformer:0.0.3"
+  INTERNAL_IMAGES_DEBUGGER: "quay.m.daocloud.io/bentoml/bento-debugger:0.0.5"
 ---
 # Source: yatai-deployment/templates/secret-shared-env.yaml
 apiVersion: v1
@@ -10736,7 +10736,7 @@ spec:
             capabilities:
               drop:
               - ALL
-          image: "quay.io/bentoml/yatai-deployment:1.1.4"
+          image: "quay.m.daocloud.io/bentoml/yatai-deployment:1.1.4"
           imagePullPolicy: IfNotPresent
 
           ports:
